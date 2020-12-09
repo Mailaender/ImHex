@@ -95,5 +95,5 @@ if (WIN32)
 endif (WIN32)
 
 if (UNIX)
-    target_link_libraries(ImHex libglfw.so libmagic.so libcrypto.so libdl.so libcapstone.so ${llvm_libs} ${Python_LIBRARIES} nlohmann_json::nlohmann_json)
+    target_link_libraries(ImHex libglfw.so libmagic.so libcrypto.so libdl.so libcapstone.so ${llvm_libs} libLLVM.so ${Python_LIBRARIES} nlohmann_json::nlohmann_json)
 endif (UNIX)
