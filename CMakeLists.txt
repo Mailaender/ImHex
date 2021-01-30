@@ -71,7 +71,7 @@ target_link_directories(imhex PRIVATE ${CRYPTO_LIBRARY_DIRS} ${CAPSTONE_LIBRARY_
 if (WIN32)
     target_link_libraries(imhex libdl.a libmagic.a libgnurx.a libtre.a libintl.a libiconv.a libshlwapi.a libcrypto.a libcapstone.a LLVMDemangle libimhex ${Python_LIBRARIES} wsock32 ws2_32)
 elseif (UNIX)
-    target_link_libraries(imhex magic crypto ${CMAKE_DL_LIBS} capstone LLVMDemangle libimhex ${Python_LIBRARIES} dl)
+    target_link_libraries(imhex magic crypto ${CMAKE_DL_LIBS} capstone libLLVM.so libimhex ${Python_LIBRARIES} dl)
 endif()
 
 createPackage()
